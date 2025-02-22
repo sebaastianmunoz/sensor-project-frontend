@@ -1,0 +1,38 @@
+<div class="device-detail-container">
+    <h3>📡 Detalles del Dispositivo - {{ deviceId }}</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Temperatura (°C)</th>
+          <th>Humedad (%)</th>
+          <th>CO2 (ppm)</th>
+          <th>Velocidad del Viento (m/s)</th>
+          <th>Nivel de Agua (%)</th>
+          <th>Flujo de Agua (L/min)</th>
+          <th>pH</th>
+          <th>Conductividad TDS</th>
+          <th>Luz (lux)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of sensorData">
+          <td>{{ data.timestamp | date:'short' }}</td>
+          <td>{{ data.temperature }}</td>
+          <td>{{ data.humidity }}</td>
+          <td>{{ data.co2_level }}</td>
+          <td>{{ data.wind_speed }}</td>
+          <td>{{ data.water_level }}</td>
+          <td>{{ data.flow_rate }}</td>
+          <td>{{ data.ph_value }}</td>
+          <td>{{ data.tds_value }}</td>
+          <td>{{ data.light_level }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="width: 100%; height: 400px;">
+      <canvas id="sensorChart"></canvas>
+    </div>
+</div>

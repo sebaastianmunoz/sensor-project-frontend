@@ -1,0 +1,44 @@
+.device-detail-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  text-align: center;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 14px;
+  background: white;
+}
+
+thead {
+  background: #007bff;
+  color: white;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+canvas {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  background: white;
+  border-radius: 8px;
+}

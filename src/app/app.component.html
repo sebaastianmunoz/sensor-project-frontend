@@ -1,0 +1,6 @@
+<nav *ngIf="isAuthenticated$ | async">
+    <!-- Aquí va tu menú o navbar -->
+    <a routerLink="/dashboard">Dashboard</a>
+    <button (click)="authService.logout()">Cerrar sesión</button>
+  </nav>
+  <router-outlet></router-outlet>
