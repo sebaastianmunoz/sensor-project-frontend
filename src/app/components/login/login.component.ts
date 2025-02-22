@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
+import { MaterialModule } from '../../material/material.module';
 
 @Component({
   selector: 'app-login',
   standalone: true,
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  imports: [CommonModule, FormsModule] // 🔹 Se agregaron los módulos necesarios
+  imports: [CommonModule, FormsModule, MaterialModule] // 🔹 Se agregaron los módulos necesarios
 })
 export class LoginComponent {
   private authService = inject(AuthService);

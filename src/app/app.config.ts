@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { environment } from '../environments/environments';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -22,6 +23,6 @@ export const appConfig: ApplicationConfig = {
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     provideHttpClient(),
-    importProvidersFrom(FormsModule)
+    importProvidersFrom(FormsModule), provideAnimationsAsync()
   ],
 };
