@@ -1,6 +1,24 @@
-<nav *ngIf="isAuthenticated$ | async">
-    <!-- Aquí va tu menú o navbar -->
-    <a routerLink="/dashboard">Dashboard</a>
-    <button (click)="authService.logout()">Cerrar sesión</button>
-  </nav>
-  <router-outlet></router-outlet>
+
+
+
+<div *ngIf="isAuthenticated$ | async">
+  <mat-toolbar fxLayout="row" fxLayoutAlign="space-between center">
+    <!-- Título a la izquierda -->
+    <span>App Arduinos</span>
+    <!-- Espaciador para separar los botones a la derecha -->
+    <span class="spacer"></span>
+
+
+    <!-- Botón Dashboard -->
+    <button routerLink="/dashboard" mat-flat-button aria-label="Example icon-button with share icon">
+      Dashboard <mat-icon>dashboard</mat-icon>
+    </button>
+
+    <!-- Botón Cerrar sesión -->
+    <button mat-flat-button aria-label="Cerrar sesión" (click)="authService.logout()">
+      Cerrar Sesión <mat-icon>exit_to_app</mat-icon>
+    </button>
+  </mat-toolbar>
+</div>
+
+<router-outlet></router-outlet>

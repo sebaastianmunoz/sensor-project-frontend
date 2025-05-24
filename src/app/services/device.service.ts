@@ -10,7 +10,7 @@ import { Auth, onAuthStateChanged, User } from '@angular/fire/auth';
 export class DeviceService {
   private http = inject(HttpClient);
   private auth = inject(Auth);
-  private apiUrl = 'http://127.0.0.1:8000/devices'; // ✅ URL de FastAPI
+  private apiUrl = 'http://localhost:8000/devices'; // ✅ URL de FastAPI
 
   /** 🔹 Obtiene los dispositivos del usuario autenticado desde FastAPI */
   getUserDevices(): Observable<any[]> {

@@ -1,0 +1,77 @@
+/* Fondo suave para la pantalla */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4f7fa; /* Fondo suave */
+    padding: 10px;
+  }
+  
+  .login-card {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .mat-card-header {
+    background-color: #3f51b5; /* Un tono bonito de azul */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .mat-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;  /* Agrega margen en la parte inferior del título */
+  }
+  
+  .mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .mat-raised-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    text-transform: none;
+    transition: background-color 0.3s ease;
+    background-color: #3f51b5;
+    color: white;
+  }
+  
+  .mat-raised-button[disabled] {
+    background-color: #c5cae9; /* Gris claro cuando está deshabilitado */
+    cursor: not-allowed;
+  }
+  
+  .mat-raised-button:hover {
+    background-color: #303f9f; /* Azul más oscuro en hover */
+  }
+  
+  .actions {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .mat-form-field mat-label {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .mat-error {
+    color: #f44336; /* Rojo para los errores */
+  }
+  

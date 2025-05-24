@@ -3,7 +3,7 @@ import { provideRouter } from '@angular/router';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withFetch  } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { environment } from '../environments/environments';
@@ -22,7 +22,7 @@ export const appConfig: ApplicationConfig = {
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
-    provideHttpClient(),
+    provideHttpClient(withFetch()),
     importProvidersFrom(FormsModule), provideAnimationsAsync()
   ],
 };

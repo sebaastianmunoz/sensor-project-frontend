@@ -3,11 +3,12 @@ import { DeviceService } from '../../services/device.service';
 import { Auth } from '@angular/fire/auth';
 import { RouterModule } from '@angular/router'; // ✅ Importar RouterModule
 import { CommonModule } from '@angular/common'; // ✅ Importar CommonModule
+import { MaterialModule } from '../../material/material.module';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [RouterModule,CommonModule],
+  imports: [RouterModule,CommonModule, MaterialModule],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })

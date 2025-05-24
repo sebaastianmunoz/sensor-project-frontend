@@ -1,4 +1,5 @@
-import { MaterialModule } from './material/material.module'; // ya lo tienes importado
+import { MaterialModule } from './material/material.module'; 
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Component } from '@angular/core';
@@ -10,7 +11,7 @@ import { Observable } from 'rxjs';
   standalone: true,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  imports: [CommonModule, RouterModule, MaterialModule] // Asegúrate de incluir BrowserAnimationsModule
+  imports: [CommonModule, RouterModule, MaterialModule, FlexLayoutModule] 
 })
 export class AppComponent {
   title = 'angular-sensor';

@@ -1,9 +1,33 @@
-<div>
+<div class="login-container">
+  <mat-card class="login-card">
+    <mat-card-header>
+      <mat-card-title>Iniciar Sesión</mat-card-title>
+    </mat-card-header>
 
-  <h2>Iniciar Sesión</h2>
-  <input [(ngModel)]="email" placeholder="Email" type="email" />
-  <input [(ngModel)]="password" placeholder="Contraseña" type="password" />
-  <button (click)="login()">Ingresar</button>
+    <mat-card-content>
+      <form (ngSubmit)="onSubmit()">
+        <!-- Campo de Email -->
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Correo electrónico</mat-label>
+          <input matInput [(ngModel)]="email" name="email" type="email" required />
+          <mat-error *ngIf="!email">El correo electrónico es obligatorio.</mat-error>
+          <mat-error *ngIf="email && !email.includes('@')">El correo electrónico no es válido.</mat-error>
+        </mat-form-field>
 
+        <!-- Campo de Contraseña -->
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Contraseña</mat-label>
+          <input matInput [(ngModel)]="password" name="password" type="password" required />
+          <mat-error *ngIf="!password">La contraseña es obligatoria.</mat-error>
+        </mat-form-field>
 
+        <!-- Botón de Login -->
+        <div class="actions">
+          <button mat-raised-button color="primary" type="submit" [disabled]="!email || !password || isSubmitting">
+            {{ isSubmitting ? 'Iniciando sesión...' : 'Iniciar sesión' }}
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
 </div>
